@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>签到页面</title>
+    <!-- <base href="http://127.0.0.1:8080/"> -->
+    <!-- 新 Bootstrap5 核心 CSS 文件 -->
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!--  popper.min.js 用于弹窗、提示、下拉菜单 -->
+
+    <!-- 最新的 Bootstrap5 核心 JavaScript 文件 -->
+    <script src="/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-primary  navbar-expand-sm text-white sticky-top ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">技术中心</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./index.html">首页</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./userMessage.html">个人信息</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            部门中心
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../pages/kaifa.html">开发部</a></li>
+                            <li><a class="dropdown-item" href="../pages/企划.html">企划部</a></li>
+                            <li><a class="dropdown-item" href="../pages/sheying.html">摄影部</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-info text-white" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div id="recoderFrom" class="container">
+        <div class="row">
+            <h4 class="text-center my-5 text-primary ">工作室在线人数~ 5</h4>
+
+        </div>
+        <div class="row">
+            <table class="table table-hover ">
+                <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>电话</th>
+                        <th>头像</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- <tr v-for="(values,indexs) in users" :key="indexs">
+                        <td>{{indexs+1}}</td>
+
+                        <template v-for="(value,key,index) in values">
+                            <td v-if="value!=null &&  key!='image'">
+                                {{value}}
+                            </td>
+                            <td v-if="value!=null &&key=='image'">
+                                <img :src="'/images/'+value+'.jpg'" decoding=" async " class="rounded-circle "
+                                    width="35px " alt=" ">
+                            </td>
+                        </template>
+                    </tr> -->
+
+                    <tr>
+                        <td>1</td>
+                        <td>ll</td>
+                        <td>15934715895</td>
+                        <td>
+                            <img src="../images/ll.jpg" decoding=" async " class="rounded-circle " width="35px" alt=" ">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ll</td>
+                        <td>15934715895</td>
+                        <td>
+                            <img src="../images/ll.jpg" decoding=" async " class="rounded-circle " width="35px" alt=" ">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ll</td>
+                        <td>15934715895</td>
+                        <td>
+                            <img src="../images/ll.jpg" decoding=" async " class="rounded-circle " width="35px" alt=" ">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ll</td>
+                        <td>15934715895</td>
+                        <td>
+                            <img src="../images/ll.jpg" decoding=" async " class="rounded-circle " width="35px" alt=" ">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>ll</td>
+                        <td>15934715895</td>
+                        <td>
+                            <img src="../images/ll.jpg" decoding=" async " class="rounded-circle " width="35px" alt=" ">
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
+        <div class="row  my-5 ">
+            <div class="col-sm-4 col-6 m-auto ">
+                <button class="btn-primary rounded fw-bolder py-1 border-0 w-100 " data-bs-toggle="modal" data-bs-target="#exampleModal">签到</button>
+            </div>
+            <div class="col-sm-4 col-6 m-auto ">
+                <button class="btn-primary rounded fw-bolder py-1 border-0 w-100 " data-bs-toggle="modal" data-bs-target="#signOut">签出</button>
+            </div>
+
+        </div>
+
+        <!-- 弹出选择签到类型 -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="text-center">请选择签到类型哦~</h5>
+                        <select v-model="type" class="form-select" aria-label="Default select example">
+                            <option disabled value="~">~</option>
+                            <option value="例会">例会</option>
+                            <option value="值班">值班</option>
+                            <option value="自习">自习</option>
+                        </select>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button v-show="place!=null" @click="siginIn($event)" type="button" class="btn btn-secondary" data-bs-dismiss="modal">签到</button>
+                        <button v-show="!(place!=null)" onclick="getLocation()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">定位</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 签出弹出框 -->
+        <div class="modal fade" id="signOut" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5 class="text-center">请选择是否携带钥匙哦~</h5>
+                        <select v-model="key" class="form-select" aria-label="Default select example">
+                            <option disabled value="~">~</option>
+                            <option value="是">是</option>
+                            <option value="否">否</option>
+                        </select>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button v-show="place!=null" @click="signOut($event)" type="button" class="btn btn-secondary" data-bs-dismiss="modal">签出</button>
+                        <button v-show="!(place!=null)" onclick="getLocation()" type="button" class="btn btn-secondary" data-bs-dismiss="modal">定位</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=7a6QKaIilZftIMmKGAFLG7QT1GLfIncg"></script>
+    <!-- <script src="/js/vue.js "></script> -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js "></script>
+    <!-- <script src="/myJs/index.js "></script> -->
+</body>
+
+</html>
