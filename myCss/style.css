@@ -1,0 +1,7 @@
+a {
+    transition: all .5s !important;
+}
+
+a:hover {
+    color: rgb(40, 196, 26) !important;
+}
